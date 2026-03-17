@@ -18,9 +18,3 @@ app.use("/api/notes", notesRouter); //it is the prefix url for all the routes de
 app.listen(PORT, () => {
     console.log(`Server is started on PORT ${PORT}`);
 }); 
-
-
-// rMRLWNDiGeBh4B5p
-
-
-// mongodb+srv://moeftekhari_db_user:rMRLWNDiGeBh4B5p@cluster0.8j3olm5.mongodb.net/?appName=Cluster0
