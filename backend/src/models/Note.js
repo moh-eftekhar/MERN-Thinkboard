@@ -16,5 +16,8 @@ const noteSchema = new mongoose.Schema({
 {timestamps:true} //createAT UpdatedAT
 );
 
-const Note = mongoose.model("Note", noteSchema);
+//here we define a collection name for the note_db database.
+const Note = mongoose.model("Note", noteSchema); 
+
+
 export default Note;
