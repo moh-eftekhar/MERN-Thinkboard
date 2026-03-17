@@ -10,7 +10,6 @@ dotenv.config();
 
 const app = express(); // Create an instance of the Express application
 const PORT = process.env.PORT || 5001;
-connectDB(); // Call the function to connect to the MongoDB database
 
 // Middleware allow to access JSON bodies in incoming requests, must add before Routes
 app.use(express.json());
@@ -24,7 +23,8 @@ app.use(rateLimiter);
 app.use("/api/notes", notesRouter); //it is the prefix url for all the routes defined in notesRoute.js
 
 
-
-app.listen(PORT, () => {
+connectDB().then(()=>{
+    app.listen(PORT, () => {
     console.log(`Server is started on PORT ${PORT}`);
-}); 
+    });
+});
