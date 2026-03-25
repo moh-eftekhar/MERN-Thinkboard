@@ -16,7 +16,7 @@ const HomePage = () => {
     const fetchNotes = async () => {
       try {
         const res = await axios.get("http://localhost:5001/api/notes")
-        console.log(res.data)
+        // console.log(res.data)
         setNotes(res.data)
         setIsRateLimited(false) 
       } catch (error) {
